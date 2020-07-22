@@ -1,0 +1,1349 @@
+<?xml version="1.0"?>
+<rdf:RDF
+     xml:base="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes"
+     xmlns="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes"
+     xmlns:ele="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes"
+
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/spec/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eleicoes="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes"/>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#concorre_ao_cargo_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#concorre_ao_cargo_de">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_concorrido_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_candidato_em -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_candidato_em">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_candidato_no_turno -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_candidato_no_turno">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato_turno"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_composta_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_composta_por">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#faz_parte_de"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_concorrido_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_concorrido_por">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_endereco_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_endereco_de">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Endereco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_turno_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_turno_de">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_turno"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_zona_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_zona_de">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_zona"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#esta_localizado_em -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#esta_localizado_em">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#possui"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Endereco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#faz_parte_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#faz_parte_de">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#possui -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#possui">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Endereco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <rdfs:comment>Relacao de localizacao</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#realiza_voto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#realiza_voto">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#voto_realizado_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Voto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato_turno -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato_turno">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_eleitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_eleitor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#vota_em_secao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_turno -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_turno">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_zona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_zona">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#vota_em_secao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#vota_em_secao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#voto_realizado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#voto_realizado_por">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Voto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_apelido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_apelido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_numero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_numero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eleicao_ano -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eleicao_ano">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eleitor_nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eleitor_nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#numero_de_eleitores -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#numero_de_eleitores">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#numero_de_votos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#numero_de_votos">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_legenda -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_legenda">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_sigla"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_nome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_sigla -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_sigla">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Ambito -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Ambito"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#faz_parte_de"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#concorre_ao_cargo_de"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#DeputadoEstadual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#DeputadoEstadual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+        <rdfs:comment>O mesmo que legenda</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#DeputadoFederal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#DeputadoFederal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_candidato"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#tem_turno"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#vota_em_secao"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Endereco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Endereco">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_endereco_de"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eh_endereco_de"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#possui"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estadual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estadual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Ambito"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Federal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Executivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Executivo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Poder"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Legislativo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Federal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Federal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Ambito"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Governador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Governador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Legislativo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Legislativo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Poder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#esta_localizado_em"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Endereco"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#esta_localizado_em"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#faz_parte_de"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#possui"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#esta_localizado_em"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#faz_parte_de"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Poder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Poder"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#esta_localizado_em"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Senador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Senador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Cargo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Voto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Voto">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#voto_realizado_por"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorCandidato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorCandidato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Voto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorSecao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorSecao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Voto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosAnulados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosAnulados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorSecao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosBrancos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosBrancos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorSecao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosNulos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosNulos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorSecao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosVálidos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosVálidos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotoPorCandidato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#possui"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Alvaro_Dias -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Alvaro_Dias">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:eh_candidato_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+        <eleicoes:eh_candidato_no_turno rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#primeiro_turno"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_podemos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Cabo_Daciolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Cabo_Daciolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_patriota"/>
+        <eleicoes:candidato_apelido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cabo Daciolo</eleicoes:candidato_apelido>
+        <eleicoes:candidato_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benevenuto Daciolo Fonseca dos Santos</eleicoes:candidato_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Ciro_Gomes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Ciro_Gomes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_democratico_trabalhista_PDT"/>
+        <eleicoes:candidato_apelido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciro</eleicoes:candidato_apelido>
+        <eleicoes:candidato_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciro Gomes</eleicoes:candidato_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Fernando_Haddad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Fernando_Haddad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:eh_candidato_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+        <eleicoes:eh_candidato_no_turno rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#primeiro_turno"/>
+        <eleicoes:eh_candidato_no_turno rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#segundo_turno"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_dos_trabalhadores_PT"/>
+        <eleicoes:candidato_apelido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hadad</eleicoes:candidato_apelido>
+        <eleicoes:candidato_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernando Hadad</eleicoes:candidato_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Geraldo_Alckmin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Geraldo_Alckmin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_da_social_democracia_brasileira_PSDB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Guilherme_Boulos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Guilherme_Boulos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_socialismo_e_liberdade_PSOL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Henrique_Meirelles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Henrique_Meirelles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_movimento_democratico_brasileiro_MDB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Jair_Bolsonaro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Jair_Bolsonaro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:eh_candidato_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+        <eleicoes:eh_candidato_no_turno rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#primeiro_turno"/>
+        <eleicoes:eh_candidato_no_turno rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#segundo_turno"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_social_liberal_PSL"/>
+        <eleicoes:candidato_apelido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolsonaro</eleicoes:candidato_apelido>
+        <eleicoes:candidato_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jair Messias Bolsonaro</eleicoes:candidato_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Joao_Amoedo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Joao_Amoedo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_novo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Marina_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#candidato_Marina_Silva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Candidato"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:concorre_ao_cargo_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_rede_sustentabilidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Florianopolis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Florianopolis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#estado_SantaCatarina"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">343645</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Municipio"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#estado_SantaCatarina"/>
+        <eleicoes:tem_zona rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#019"/>
+        <eleicoes:tem_zona rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#076"/>
+        <eleicoes:tem_zona rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#095"/>
+        <eleicoes:tem_zona rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#096"/>
+        <eleicoes:tem_zona rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#105"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">396719</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Brasil_Acima_de_Tudo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Brasil_Acima_de_Tudo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Jair Bolsonaro
+PSL / PRTB</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Brasil_Soberano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Brasil_Soberano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Ciro Gomes
+PDT / AVANTE</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Essa_e_a_Solucao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Essa_e_a_Solucao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Henrique Meirelles
+MDB / PHS</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Mudanca_de_Verdade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Mudanca_de_Verdade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Alvaro Dias
+Podemos, PSC, PRP, PTC</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_NOVO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_NOVO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Amoedo
+NOVO</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_O_Povo_Feliz_de_Novo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_O_Povo_Feliz_de_Novo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Fernando Haddad
+PT / PC do B / PROS</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Para_Unir_o_Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Para_Unir_o_Brasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Alckmin
+PSDB / PTB / PP / PR / DEM / SOLIDARIEDADE / PPS / PRB / PSD</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Unidos_para_Transformar_o_Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Unidos_para_Transformar_o_Brasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Marina Silva
+REDE / PV</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Vamos_Sem_Medo_de_Mudar_o_Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Vamos_Sem_Medo_de_Mudar_o_Brasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Guilherme Boulos
+PSOL / PCB</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_patri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_patri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Coligacao"/>
+        <rdfs:comment>Daciolo
+Patriota</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eleitor_Jefferson_Chaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#eleitor_Jefferson_Chaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleitor"/>
+        <eleicoes:vota_em_secao rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_500"/>
+        <eleicoes:eleitor_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jefferson de Oliveira Chaves</eleicoes:eleitor_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#estado_SantaCatarina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#estado_SantaCatarina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Estado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_CENTRO_COMUNITARIO_COSTA_E_SILVA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_CENTRO_COMUNITARIO_COSTA_E_SILVA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3128</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_COLEGIO_BOM_JESUS_-_SAGUACU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_COLEGIO_BOM_JESUS_-_SAGUACU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5157</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_COLEGIO_ESTADUAL_GERMANO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_COLEGIO_ESTADUAL_GERMANO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3069</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_ESCOLA_MUNICIPAL_GOVERNADOR_PEDRO_IVO_CAMPOS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_ESCOLA_MUNICIPAL_GOVERNADOR_PEDRO_IVO_CAMPOS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2380</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_ESCOLA_PLACIDO_OLIMPIO_DE_OLIVEIRA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_ESCOLA_PLACIDO_OLIMPIO_DE_OLIVEIRA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5523</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2321</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_UNOPAR_-_POLO_JOINVILLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_UNOPAR_-_POLO_JOINVILLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#LocalDeVotacao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#cidade_Joinville"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3605</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_da_social_democracia_brasileira_PSDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_da_social_democracia_brasileira_PSDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_democratico_trabalhista_PDT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_democratico_trabalhista_PDT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Brasil_Soberano"/>
+        <eleicoes:partido_legenda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PDT</eleicoes:partido_legenda>
+        <eleicoes:partido_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partido Democrático Trabalhista</eleicoes:partido_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_dos_trabalhadores_PT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_dos_trabalhadores_PT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_O_Povo_Feliz_de_Novo"/>
+        <eleicoes:partido_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partido dos Trabalhadores</eleicoes:partido_nome>
+        <eleicoes:partido_sigla rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PT</eleicoes:partido_sigla>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_movimento_democratico_brasileiro_MDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_movimento_democratico_brasileiro_MDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_novo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_novo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <eleicoes:partido_legenda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOVO</eleicoes:partido_legenda>
+        <eleicoes:partido_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOVO</eleicoes:partido_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_patriota -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_patriota">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_patri"/>
+        <eleicoes:partido_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patriota</eleicoes:partido_nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_podemos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_podemos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Mudanca_de_Verdade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_rede_sustentabilidade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_rede_sustentabilidade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_social_liberal_PSL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_social_liberal_PSL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+        <eleicoes:faz_parte_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#coligacao_Brasil_Acima_de_Tudo"/>
+        <eleicoes:partido_legenda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partido Social Liberal</eleicoes:partido_legenda>
+        <eleicoes:partido_nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partido Social Liberal</eleicoes:partido_nome>
+        <eleicoes:partido_sigla rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSL</eleicoes:partido_sigla>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_socialismo_e_liberdade_PSOL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#partido_socialismo_e_liberdade_PSOL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Partido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#primeiro_turno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#primeiro_turno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+        <eleicoes:eh_turno_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_114 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_114">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_115 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_115">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_116">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">332</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_117 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_117">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">328</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_123 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_123">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_500">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">331</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_603 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#secao_603">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Secao"/>
+        <eleicoes:esta_localizado_em rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:numero_de_eleitores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">334</eleicoes:numero_de_eleitores>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#segundo_turno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#segundo_turno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Turno"/>
+        <eleicoes:eh_turno_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <eleicoes:eh_zona_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_CENTRO_COMUNITARIO_COSTA_E_SILVA"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_COLEGIO_BOM_JESUS_-_SAGUACU"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_COLEGIO_ESTADUAL_GERMANO"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_ESCOLA_MUNICIPAL_GOVERNADOR_PEDRO_IVO_CAMPOS"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_ESCOLA_PLACIDO_OLIMPIO_DE_OLIVEIRA"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_INSTITUTO_FEDERAL_DE_SANTA_CATARINA_-_IFSC"/>
+        <eleicoes:possui rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#local_UNOPAR_-_POLO_JOINVILLE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#076 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#076">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <eleicoes:eh_zona_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+        <rdfs:comment>http://www.tse.jus.br/eleitor/servicos/cartorios-e-zonas-eleitorais/pesquisa-a-zonas-eleitorais</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#095 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#095">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <eleicoes:eh_zona_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#096 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#096">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <eleicoes:eh_zona_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#105 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#105">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#ZonaEleitoral"/>
+        <eleicoes:eh_zona_de rdf:resource="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Eleicoes2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#DeputadoEstadual"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#DeputadoFederal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Governador"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Presidente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#Senador"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosAnulados"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosBrancos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosNulos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jefferson/ontologies/2018/10/eleicoes#VotosVálidos"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
